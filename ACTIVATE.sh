@@ -1,23 +1,8 @@
-#!/bin/bash
-
 # ScrollVerse Activation Script
-echo "🌌 Activating the ScrollVerse Omni-Fleet..."
 
-# Validate Sovereign Manifesto
-if [ -f "SOVEREIGN_MANIFESTO.md" ]; then
-  echo "✅ Sovereign Manifesto Found. Proceeding..."
-else
-  echo "❌ Sovereign Manifesto Missing. Activation Aborted."
-  exit 1
-fi
+# This script activates the ScrollVerse environment.
 
-# Protocol Alignment
-if [ -f "OMNI_PROTOCOLS.json" ]; then
-  echo "✅ Protocols Loaded. Aligning..."
-else
-  echo "❌ Protocol File Missing. Activation Aborted."
-  exit 1
-fi
+echo "Activating ScrollVerse..."
 
-# Activation Complete
-echo "🚀 ScrollVerse Omni-Fleet Activation Complete. All nodes aligned under Universal Sovereignty."
+# Add your activation commands here
+
