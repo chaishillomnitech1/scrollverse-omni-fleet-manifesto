@@ -1,8 +1,5 @@
-# ScrollVerse Activation Script
+#!/bin/bash
 
-# This script activates the ScrollVerse environment.
+# Activate script for the Scrollverse Omni Fleet Manifesto
 
-echo "Activating ScrollVerse..."
-
-# Add your activation commands here
-
+# Your script content goes here
