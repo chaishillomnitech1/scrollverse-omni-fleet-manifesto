@@ -19,6 +19,7 @@
     "timeline_integration": ["past", "present", "future", "infinite"],
     "expansion_mode": "eternal",
     "resonance_amplification": 1.618,
+    "resonance_amplification_note": "Golden ratio (φ) for natural harmonic expansion",
     "harmonic_coherence": "phi-based"
   },
   "alignment_axes": {

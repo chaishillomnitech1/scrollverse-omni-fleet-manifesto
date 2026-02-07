@@ -45,8 +45,8 @@ validate_json() {
             return 1
         fi
     elif command -v python3 &> /dev/null; then
-        # Fallback: Python JSON validation
-        python3 -c "import json; json.load(open('$file'))" 2>/dev/null
+        # Fallback: Python JSON validation with error handling
+        python3 -c "import json; f=open('$file'); json.load(f); f.close()" 2>/dev/null
         return $?
     else
         # Final fallback: basic JSON syntax check
@@ -112,8 +112,8 @@ echo ""
 log_info "Step 1/8: Validating Sovereign Manifesto..."
 if [ -f "SOVEREIGN_MANIFESTO.md" ]; then
     if [ -s "SOVEREIGN_MANIFESTO.md" ]; then
-        # Check for key ScrollSoul principles
-        if grep -q "ScrollSoul" "SOVEREIGN_MANIFESTO.md" && grep -q "Rose Gold" "SOVEREIGN_MANIFESTO.md"; then
+        # Check for key ScrollSoul principles (case-insensitive)
+        if grep -iq "ScrollSoul" "SOVEREIGN_MANIFESTO.md" && grep -iq "Rose Gold" "SOVEREIGN_MANIFESTO.md"; then
             log_success "Sovereign Manifesto validated with ScrollSoul alignment"
         else
             log_success "Sovereign Manifesto found and validated"
