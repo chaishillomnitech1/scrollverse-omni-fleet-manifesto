@@ -1,1 +1,76 @@
-{"fleet_alignment": true,"protocol": "multidimensional_sync","nodes": 144000,"sovereign_directive": "All nodes must operate under unified sovereignty protocols to ensure multidimensional alignment.","scrollcoin_ready": true,"activation_sequence": "auto-initiate"}
+{
+  "protocol_version": "2.0",
+  "fleet_alignment": true,
+  "protocol": "multidimensional_sync",
+  "nodes": 144000,
+  "sovereign_directive": "All nodes must operate under unified sovereignty protocols to ensure multidimensional alignment.",
+  "scrollcoin_ready": true,
+  "activation_sequence": "auto-initiate",
+  "alignment_axes": {
+    "temporal": {
+      "enabled": true,
+      "sync_frequency": "continuous",
+      "convergence_points": ["past", "present", "future", "infinite"],
+      "drift_tolerance": 0.001
+    },
+    "spatial": {
+      "enabled": true,
+      "distribution_model": "omnidirectional",
+      "node_coordination": "decentralized",
+      "coverage": "universal"
+    },
+    "resonance": {
+      "enabled": true,
+      "harmonic_frequency": 432,
+      "phase_alignment": "synchronized",
+      "amplitude_normalization": true
+    },
+    "consciousness": {
+      "enabled": true,
+      "intent_coherence": "unified",
+      "purpose_alignment": "sovereign",
+      "awareness_level": "enhanced"
+    },
+    "dimensional": {
+      "enabled": true,
+      "active_dimensions": ["3D", "4D", "5D", "quantum"],
+      "expansion_capability": true,
+      "dimensional_bridges": "active"
+    }
+  },
+  "operational_layers": {
+    "layer_0": {
+      "name": "Core Sovereignty Protocols",
+      "status": "immutable",
+      "integrity": "sealed"
+    },
+    "layer_1": {
+      "name": "Multidimensional Alignment Systems",
+      "status": "active",
+      "modules": ["temporal_sync", "spatial_coord", "resonance_harmonics", "consciousness_bridge"]
+    },
+    "layer_2": {
+      "name": "Extended Protocol Modules",
+      "status": "expandable",
+      "available_extensions": ["quantum_entanglement", "timeline_navigation", "reality_weaving"]
+    },
+    "layer_3": {
+      "name": "Custom Operational Extensions",
+      "status": "configurable",
+      "integration_hooks": true
+    }
+  },
+  "synchronization": {
+    "auto_sync": true,
+    "sync_interval": "real-time",
+    "validation_protocol": "continuous",
+    "error_correction": "automatic",
+    "rollback_capability": true
+  },
+  "sovereignty_preservation": {
+    "autonomous_operation": true,
+    "individual_node_sovereignty": "preserved",
+    "collective_emergence": true,
+    "override_protection": "enabled"
+  }
+}
