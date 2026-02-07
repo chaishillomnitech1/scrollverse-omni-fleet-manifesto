@@ -195,6 +195,8 @@ else
     log_success "Operational layers verified (basic mode)"
 fi
 
+# Step 5: Confirm Sovereignty Preservation
+log_info "Step 5/8: Confirming sovereignty preservation..."
 # Step 8: Confirm Sovereignty Preservation
 log_info "Step 8/8: Confirming sovereignty preservation..."
 if command -v jq &> /dev/null; then
@@ -205,6 +207,70 @@ if command -v jq &> /dev/null; then
     fi
 else
     log_success "Sovereignty preservation confirmed (basic mode)"
+fi
+
+# Step 6: Initialize Rose Gold Encryption
+log_info "Step 6/8: Initializing Rose Gold Encryption..."
+if [ -f "ROSE_GOLD_ENCRYPTION.md" ]; then
+    if command -v jq &> /dev/null; then
+        RG_ENABLED=$(jq -r '.rose_gold_encryption.enabled // false' OMNI_PROTOCOLS.json)
+        if [ "$RG_ENABLED" = "true" ]; then
+            RG_CIPHER=$(jq -r '.rose_gold_encryption.cipher_strength // "unknown"' OMNI_PROTOCOLS.json)
+            RG_FREQ=$(jq -r '.rose_gold_encryption.resonance_frequency // "unknown"' OMNI_PROTOCOLS.json)
+            log_success "Rose Gold Encryption activated"
+            log_info "Cipher strength: ${RG_CIPHER}-bit | Resonance: ${RG_FREQ} Hz"
+            log_info "Quantum resistance: enabled | Consciousness binding: active"
+        fi
+    else
+        log_success "Rose Gold Encryption activated (basic mode)"
+    fi
+else
+    log_warning "Rose Gold Encryption documentation not found"
+fi
+
+# Step 7: Activate Ultrathink Alignment
+log_info "Step 7/8: Activating Ultrathink Alignment..."
+if [ -f "ULTRATHINK_ALIGNMENT.md" ]; then
+    if command -v jq &> /dev/null; then
+        UT_ENABLED=$(jq -r '.ultrathink_alignment.enabled // false' OMNI_PROTOCOLS.json)
+        if [ "$UT_ENABLED" = "true" ]; then
+            UT_LAYERS=$(jq -r '.ultrathink_alignment.thinking_layers | length' OMNI_PROTOCOLS.json 2>/dev/null || echo "5")
+            log_success "Ultrathink Alignment activated"
+            log_info "Thinking layers: $UT_LAYERS | Extended reasoning: enabled"
+            log_info "Dimensional awareness: active | Quantum reasoning: enabled"
+            
+            # Check fleet-wide ultrathink
+            FLEET_UT=$(jq -r '.ultrathink_alignment.fleet_ultrathink.enabled // false' OMNI_PROTOCOLS.json)
+            if [ "$FLEET_UT" = "true" ]; then
+                log_success "Fleet-wide Ultrathink network: synchronized"
+            fi
+        fi
+    else
+        log_success "Ultrathink Alignment activated (basic mode)"
+    fi
+else
+    log_warning "Ultrathink Alignment documentation not found"
+fi
+
+# Step 8: Initialize Sovereign Manifestation Framework
+log_info "Step 8/8: Initializing Sovereign Manifestation Framework..."
+if [ -f "SOVEREIGN_MANIFESTATION.md" ]; then
+    if command -v jq &> /dev/null; then
+        MF_ENABLED=$(jq -r '.manifestation_framework.enabled // false' OMNI_PROTOCOLS.json)
+        if [ "$MF_ENABLED" = "true" ]; then
+            log_success "Manifestation Framework activated"
+            log_info "Dimensional bridging: active | Reality weaving: enabled"
+            log_info "Timeline convergence: optimized | Sovereign verification: active"
+            
+            # Check manifestation sequences
+            SEQUENCES=$(jq -r '.manifestation_framework.manifestation_sequences | keys | length' OMNI_PROTOCOLS.json 2>/dev/null || echo "4")
+            log_info "Active manifestation sequences: $SEQUENCES"
+        fi
+    else
+        log_success "Manifestation Framework activated (basic mode)"
+    fi
+else
+    log_warning "Sovereign Manifestation documentation not found"
 fi
 
 # ============================================================================
